@@ -9,8 +9,10 @@
   "author": "Janusz Erazmus",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "json": "^9.0.6",
+    "mongoose": "^5.2.14",
     "xmlhttprequest": "^1.8.0"
   }
 }
