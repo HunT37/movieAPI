@@ -14,7 +14,7 @@ const API_KEY = '3f24cb9';
 app.use(bodyParser.json());
 
 // Start application server
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log(`Server running on port ${PORT}.`);
 });
 
