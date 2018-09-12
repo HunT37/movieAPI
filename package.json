@@ -15,4 +15,7 @@
     "mongoose": "^5.2.14",
     "xmlhttprequest": "^1.8.0"
   }
+  "scripts": {
+	  "start": "node index.js"
+	}
 }
