@@ -48,6 +48,12 @@ var commentSchema = new mongoose.Schema({
 });
 var dbComment = mongoose.model('Comments',commentSchema);
 
+var index = express.Router();
+index.get('/', function(req, res) {
+    res.json({"hello": "world"});
+});
+app.use('/', index);
+
 var movies = express.Router();
 movies.get('/', function(req, res) {
     // Get full list of movies in database
