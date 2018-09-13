@@ -17,7 +17,7 @@ POST movies - Insert new movie with title given in request body<br/>
 
 GET comments - Returns all comments from database<br/>
 GET comments/:imdbID - Returns all comments set for chosen imdbID<br/>
-SET comments - Insert new comment for movie with imdbID given in request body<br/>
+POST comments - Insert new comment for movie with imdbID given in request body<br/>
 
 ### Tests
 Tests are HTTP request to heroku app. You can run test with "node tests.js" in test/ folder.<br/>
