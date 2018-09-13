@@ -1,15 +1,24 @@
-We’d like you to build simple REST API for us - a basic movie database interacting with external API. Here’s full specification of endpoints that we’d like it to have:
+# Project
 
-POST /movies:
-Request body should contain only movie title, and its presence should be validated.
-Based on passed title, other movie details should be fetched from http://www.omdbapi.com/ (or other similar, public movie database) - and saved to application database.
-Request response should include full movie object, along with all data fetched from external API.
-GET /movies:
-Should fetch list of all movies already present in application database.
-Additional filtering, sorting is fully optional (BONUS points)
-POST /comments:
-Request body should contain ID of movie already present in database, and comment text body.
-Comment should be saved to application database and returned in request response.
-GET /comments:
-Should fetch list of all comments present in application database.
-Should allow filtering comments by associated movie, by passing its ID.
+movieAPI is REST API application and stores data about film. Data is donwloaded from www.omdbapi.com open API
+
+## Used libraries
+
+express.js -  Building RST API
+bodyParser.js - To prase HTTP request body
+json - Communication data format
+mongoose.js - MongoDB database
+XMLHttpRequest - To send HTTP request to omdbapi
+
+### Endpoints
+
+GET movies - Returns all movies from database
+POST movies - Insert new movie with title given in request body
+
+GET comments - Returns all comments from database
+GET comments/:imdbID - Returns all comments set for chosen imdbID
+SET comments - Insert new comment for movie with imdbID given in request body
+
+## Authors
+
+* **Janusz Erazmus** - [PurpleBooth](https://github.com/HunT37)
