@@ -5,6 +5,7 @@ const json = require('json');
 const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://movieapi_user:movieapi@movieapi-6fcnm.mongodb.net/movies_database?retryWrites=true');
 
+let hello = require('./route/hello.js');
 let movies = require('./route/movies.js');
 let comments = require('./route/comments.js');
 
@@ -26,19 +27,13 @@ db.once('open', function() {
 });
 
 // Set routes for movies a comments controlers
+app.route("/")
+    .get(hello.getWelcome)
 app.route("/movies")
     .get(movies.getMovies)
-    .post(movies.postMovie);
+    .post(movies.postMovie)
 app.route("/comments/")
     .get(comments.getComments)
     .post(comments.postComment)
 app.route("/comments/:imdbID")
     .get(comments.getCommentByID)
-
-
-// Simple Homepage
-let index = express.Router();
-index.get('/', function(req, res) {
-    res.json({"hello": "world"});
-});
-app.use('/', index);
