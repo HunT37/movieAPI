@@ -24,10 +24,6 @@ function getWelcome(req, res) {
         <li>GET comments/:imdbID - Returns all comments set for chosen imdbID</li>
         <li>SET comments - Insert new comment for movie with imdbID given in request body</li>
         </ul>
-        
-        <h2>Authors</h2>
-        
-        <p><b>Janusz Erazmus</b></p>
 
         <h2>Tests</h2>
         <p>Tests are HTTP request to heroku app. You can run test with "node tests.js" in test/ folder.</p>
@@ -48,6 +44,10 @@ function getWelcome(req, res) {
 
         <p><b>testPostComments('tt0351283', 'super film!');</b></p>
         <p>TEST POST comments/ - {"imdbID":"tt0351283","text":"super film!"}</p>
+
+        <h2>Authors</h2>
+        
+        <p><b>Janusz Erazmus</b></p>
     `);
 };
 
