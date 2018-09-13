@@ -22,7 +22,7 @@ function getWelcome(req, res) {
         
         <li>GET comments - Returns all comments from database</li>
         <li>GET comments/:imdbID - Returns all comments set for chosen imdbID</li>
-        <li>SET comments - Insert new comment for movie with imdbID given in request body</li>
+        <li>POST comments - Insert new comment for movie with imdbID given in request body</li>
         </ul>
 
         <h2>Tests</h2>
