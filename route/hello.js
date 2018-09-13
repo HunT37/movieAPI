@@ -27,7 +27,27 @@ function getWelcome(req, res) {
         
         <h2>Authors</h2>
         
-        <b>Janusz Erazmus</b>
+        <p><b>Janusz Erazmus</b></p>
+
+        <h2>Tests</h2>
+        <p>Tests are HTTP request to heroku app. You can run test with "node tests.js" in test/ folder.</p>
+
+        <p>Example responses:</p>
+
+        <p><b>testGetCommentsByID('tt0351283');</b></p>
+        <p>TEST GET comments/:imdbID - imdbID: tt0351283 has 1 comments in database!</p>
+
+        <p><b>testGetComments();</b></p>
+        <p>TEST GET comments/ - We got 9 comments in database!</p>
+
+        <p><b>testGetMovies();</b></p>
+        <p>TEST GET movies/ - We got 8 movies in database!</p>
+
+        <p><b>testPostMovies('Lamb');</b></p>
+        <p>TEST POST movies/ - {"_id":"5b9ace8e6199780014874a14","imdbID":"tt3908598","title":"Lamb","year":2015,"rated":"R","released":"12 Jan 2016","runtime":"97 min","genre":"Drama","director":"Ross Partridge","writer":"Bonnie Nadzam (novel), Ross Partridge (screenplay), Ross Partridge","actors":"Ross Partridge, Oona Laurence, Jess Weixler, Tom Bower","plot":"When a man meets a young girl in a parking lot he attempts to help her avoid a bleak destiny by initiating her into the beauty of the outside world. The journey shakes them in ways neither expects.","language":"English","country":"USA","awards":"4 wins & 4 nominations.","__v":0}</p>
+
+        <p><b>testPostComments('tt0351283', 'super film!');</b></p>
+        <p>TEST POST comments/ - {"imdbID":"tt0351283","text":"super film!"}</p>
     `);
 };
 
