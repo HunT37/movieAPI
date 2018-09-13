@@ -1,6 +1,6 @@
 # Project
 
-movieAPI is REST API application and stores data about film. Data is donwloaded from www.omdbapi.com open API
+movieAPI is REST API application and stores data about movies. Data is downloaded from www.omdbapi.com open API
 
 ## Used libraries
 
